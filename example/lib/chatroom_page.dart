@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:agora_chat_room_kit/chatroom_uikit.dart';
+import 'package:agora_chatroom_uikit/chatroom_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

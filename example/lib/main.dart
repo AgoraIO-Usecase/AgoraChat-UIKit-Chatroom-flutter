@@ -1,4 +1,4 @@
-import 'package:agora_chat_room_kit/chatroom_uikit.dart';
+import 'package:agora_chatroom_uikit/chatroom_uikit.dart';
 import 'package:agora_chat_room_kit_example/chatroom_list_page.dart';
 import 'package:agora_chat_room_kit_example/chatroom_page.dart';
 import 'package:agora_chat_room_kit_example/ui_test/ui_page.dart';

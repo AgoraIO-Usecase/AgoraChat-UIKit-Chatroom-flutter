@@ -55,6 +55,7 @@ export 'ui/component/chatroom_gift_message_list_view.dart';
 export 'ui/component/chatroom_global_broad_cast_view.dart';
 export 'ui/component/chatroom_message_list_view.dart';
 export 'ui/component/chatroom_participants_list_view.dart';
+export 'ui/component/chatroom_pin_message_view.dart';
 
 export 'utils/time_tool.dart';
 

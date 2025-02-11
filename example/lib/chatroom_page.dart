@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:agora_chat_room_kit/chatroom_uikit.dart';
+import 'package:agora_chatroom_uikit/chatroom_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -96,10 +96,17 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                   top: MediaQuery.of(context).viewInsets.top + 10,
                   left: 0,
                   right: 0,
-                  child: const Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12, right: 54),
+                        child: ChatroomPinMessageWidget(
+                          roomId: controller.roomId,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const SizedBox(
                         height: 20,
                         child: ChatroomGlobalBroadcastView(),
                       )

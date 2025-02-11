@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String packageName = 'agora_chat_room_kit';
+const String packageName = 'agora_chatroom_uikit';
 
 class ChatImageLoader {
   static Widget emoji(String imageName, {double size = 36}) {

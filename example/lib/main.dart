@@ -6,7 +6,7 @@ import 'package:agora_chat_room_kit_example/ui_test/ui_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-const String appKey = 'easemob#easeim';
+const String appKey = '';
 
 void main() async {
   await ChatroomUIKitClient.instance.initWithAppkey(
@@ -76,7 +76,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String? _userId;
-  String? _password;
+  String? _token;
   String? _nickname;
 
   @override
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     hintText: 'token',
                   ),
                   onChanged: (value) {
-                    _password = value;
+                    _token = value;
                   },
                 ),
                 TextField(
@@ -149,13 +149,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> loginAndPushRoom() async {
-    if (_userId?.isNotEmpty == true && (_password?.isNotEmpty == true)) {
+    if (_userId?.isNotEmpty == true && (_token?.isNotEmpty == true)) {
       EasyLoading.show(status: 'login...');
       UserEntity user = UserEntity(_userId!, nickname: _nickname);
       try {
-        await ChatroomUIKitClient.instance.loginWithPassword(
+        await ChatroomUIKitClient.instance.loginWithToken(
           userId: _userId!,
-          password: _password!,
+          token: _token!,
           userInfo: user,
         );
         pushToChatRoomList();
@@ -169,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
       }
       EasyLoading.dismiss();
     } else {
-      EasyLoading.showError('userId or password is empty');
+      EasyLoading.showError('userId or token is empty');
     }
   }
 }
